@@ -18,4 +18,4 @@ function captura() {
 
     salidaDatos.textContent = "Boleta: " + boleta + "    |    " + " Nombre " + nombre + "    |    " + " Grupo:" + grupo 
     + "    |    " + "Materia: " + materia + "    |    " + " Fecha: " + fecha.toUTCString();
-};
+}
