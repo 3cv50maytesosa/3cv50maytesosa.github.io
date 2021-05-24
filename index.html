@@ -58,6 +58,28 @@
     <footer>
       <h5>Copyright 2021 Sosa Manrique Mayte</h5>
     </footer>
-    <script src="js/ctrlT1.js"></script>
+    <script type="module">
+     import { ctrlT1 } from "/js/ctrlT1.js";
+     var forma = document.getElementById("forma"),
+    salidaBoleta = document.getElementById("salidaBoleta"),
+    salidaNombre = document.getElementById("salidaNombre"),
+    salidaGrupo = document.getElementById("salidaGrupo"),
+    salidaMateria = document.getElementById("salidaMateria"),
+    txtFecha = forma["fecha"], 
+    salidaFecha = document.getElementById("salidaFecha"),
+    salidaDatos = document.getElementById("salidaDatos");
+
+function captura() {
+    
+    var fecha = new Date(txtFecha.value),
+    boleta = forma["boleta"].value.trim(),
+    nombre = forma["nombre"].value.trim(),
+    grupo = forma["grupo"].value.trim(),
+    materia = forma["materia"].value.trim();
+
+    salidaDatos.textContent = "Boleta: " + boleta + "    |    " + " Nombre " + nombre + "    |    " + " Grupo:" + grupo 
+    + "    |    " + "Materia: " + materia + "    |    " + " Fecha: " + fecha.toUTCString();
+}
+   </script>
   </body>
 </html>
